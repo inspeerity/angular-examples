@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderComponent should create 1`] = `
+<div
+  id="root0"
+  ng-version="6.1.10"
+>
+  <div
+    class="header"
+  >
+    <div
+      fxflex=""
+      fxlayout=""
+    >
+      <div>
+        <a
+          routerlink="/"
+        >
+          <inspeerity-logo />
+        </a>
+      </div>
+      <mat-toolbar
+        color="primary"
+      >
+        <div
+          class="header__container"
+          fxflex=""
+          fxlayout=""
+          fxlayoutalign="space-between center"
+        >
+          <div
+            class="header__name"
+          >
+            <!--bindings={
+  "ng-reflect-ng-if": "true"
+}-->
+            <div>
+              HEADER.WELCOME
+            </div>
+          </div>
+          <ul
+            class="header__items"
+            fxlayout=""
+            fxlayoutalign="center center"
+            fxlayoutgap="2rem"
+          >
+            <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+            <!--bindings={
+  "ng-reflect-ng-if": "false"
+}-->
+            <!--bindings={
+  "ng-reflect-ng-if": "true"
+}-->
+            <li
+            >
+              <a
+                ng-reflect-translate="HEADER.NAVIGATION.SIGN_OUT"
+              >
+                HEADER.NAVIGATION.SIGN_OUT
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div
+          fxhide.gt-xs=""
+        >
+          <button
+            mat-icon-button=""
+          >
+            <mat-icon>
+              menu
+            </mat-icon>
+          </button>
+        </div>
+      </mat-toolbar>
+    </div>
+  </div>
+</div>
+`;

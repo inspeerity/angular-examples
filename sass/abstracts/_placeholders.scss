@@ -1,0 +1,31 @@
+@import "./../theme/variables";
+@import "./mixins";
+@import "./variables";
+
+%grid-container {
+  max-width: 120.4rem;
+  margin: 0 auto;
+}
+
+%grid-columns {
+  display: grid;
+  grid-column-gap: 2rem;
+  grid-template-columns: repeat(12, 1fr);
+  @include respond(phone) {
+    grid-column-gap: 0.4rem;
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+%layout-margins {
+  margin-top: $big-margin + $normal-margin;
+  margin-bottom: $big-margin;
+}
+%bubble-container {
+  border-radius: 180%;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

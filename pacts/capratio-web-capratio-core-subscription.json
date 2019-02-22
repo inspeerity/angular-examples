@@ -1,0 +1,61 @@
+{
+  "consumer": {
+    "name": "inspeerity"
+  },
+  "provider": {
+    "name": "inspeerity-core-subscription"
+  },
+  "interactions": [
+    {
+      "description": "a request to POST a new subscription",
+      "providerState": "provider accepts a new subscription",
+      "request": {
+        "method": "POST",
+        "path": "/subscription",
+        "headers": {
+          "Content-Type": "application/json;charset=UTF-8",
+          "X-API-VERSION": "1"
+        },
+        "body": {
+          "email": "test@example.com"
+        }
+      },
+      "response": {
+        "status": 201,
+        "headers": {
+          "Content-Type": "application/json;charset=UTF-8"
+        },
+        "body": {
+          "id": "25e3ae11-d294-4a69-9421-2816df07b531"
+        },
+        "matchingRules": {
+          "$.body": {
+            "match": "type"
+          }
+        }
+      }
+    },
+    {
+      "description": "a request to PUT a new subscription confirmation",
+      "providerState": "provider accepts a new subscription confirmation",
+      "request": {
+        "method": "PUT",
+        "path": "/subscription/415e6ab3-390b-4937-8f8c-7e5ab98c931c/confirmed",
+        "headers": {
+          "Content-Type": "application/json;charset=UTF-8",
+          "X-API-VERSION": "1"
+        },
+        "body": {}
+      },
+      "response": {
+        "status": 200,
+        "headers": {}
+      }
+    }
+  ],
+  "metadata": {
+    "pactSpecification": {
+      "version": "2.0.0"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+<div class="header">
+  <div fxFlex fxLayout>
+    <div>
+      <a routerLink="/"> <ins-logo></ins-logo> </a>
+    </div>
+    <mat-toolbar color="primary">
+      <div
+        fxFlex
+        fxLayout
+        fxLayoutAlign="space-between center"
+        class="header__container"
+      >
+        <div class="header__name" fxHide.xs>
+          <div
+            *ngIf="isAuthenticated"
+            [innerHTML]="'HEADER.WELCOME' | translate: { userName: userName }"
+          ></div>
+        </div>
+        <ul
+          fxLayout
+          fxLayoutGap="2rem"
+          fxLayoutAlign="center center"
+          class="header__items"
+        >
+          <li fxHide.xs *ngIf="!isAuthenticated">
+            <a class="header__link"
+               routerLink="/sign-in"
+               [translate]="'HEADER.NAVIGATION.SIGN_IN'"
+            ></a>
+          </li>
+          <li *ngIf="!isAuthenticated">
+            <a mat-stroked-button routerLink="/sign-up">
+              <span [translate]="'HEADER.NAVIGATION.GET_STARTED'"></span>
+            </a>
+          </li>
+          <li *ngIf="isAuthenticated"">
+            <a class="header__link"
+               (click)="logout()"
+               [translate]="'HEADER.NAVIGATION.SIGN_OUT'"
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div fxHide.gt-xs>
+        <button mat-icon-button (click)="toggleSidenav()">
+          <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+    </mat-toolbar>
+  </div>
+</div>

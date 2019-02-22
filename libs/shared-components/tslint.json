@@ -1,0 +1,17 @@
+{
+  "extends": "../../tslint.json",
+  "rules": {
+    "directive-selector": [
+      true,
+      "attribute",
+      "capratio-web",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "capratio-web",
+      "kebab-case"
+    ]
+  }
+}

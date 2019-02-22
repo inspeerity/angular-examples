@@ -1,0 +1,33 @@
+@import "~@angular/material/theming";
+@import "./variables";
+
+@include mat-core();
+
+$inspeerity-web-primary: mat-palette($brand-color-red);
+$inspeerity-web-accent: mat-palette($brand-color-black);
+
+$inspeerity-web-warn: mat-palette($brand-color-light-red);
+
+$inspeerity-web-theme: mat-light-theme(
+  $inspeerity-web-primary,
+  $inspeerity-web-accent,
+  $inspeerity-web-warn
+);
+
+$background-color: $brand-color-beige;
+
+$background: map-get($inspeerity-web-theme, background);
+$background: map_merge(
+  $background,
+  (
+    background: $background-color
+  )
+);
+$inspeerity-web-theme: map_merge(
+  $inspeerity-web-theme,
+  (
+    background: $background
+  )
+);
+
+@include angular-material-theme($inspeerity-web-theme);
